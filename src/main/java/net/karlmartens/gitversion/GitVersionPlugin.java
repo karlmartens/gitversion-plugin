@@ -58,7 +58,7 @@ public class GitVersionPlugin implements Plugin<Project> {
         if (gitHome == null || gitHome.trim().isEmpty())
             return executable;
 
-        Path path = Paths.get(gitHome, executable);
+        Path path = Paths.get(gitHome, "bin", executable);
         return path.toString();
     }
 }
